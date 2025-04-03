@@ -17,7 +17,7 @@ std::string inputText(std::string message)
 {
 	std::cerr << message;
 	std::string buffer{};
-	std::cin >> buffer;
+	std::getline(std::cin, buffer);
 	
 	return buffer;	
 }
