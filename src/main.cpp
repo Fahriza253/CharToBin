@@ -24,10 +24,13 @@ std::string inputText(std::string message)
 
 void convertToBinary(std::string text)
 {
+	std::cerr << "Kalimat : " << text << "\n";
+
 	for (char each : text)
 	{
 		std::bitset<8> binaryRep(each);
-		std::cerr << binaryRep << "\n";
+		std::cerr << "Karakter : " << each << "\n"
+			      << "Biner    : " << binaryRep << "\n";
 	}
 	
 }
