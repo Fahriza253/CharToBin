@@ -2,7 +2,6 @@
 #include <bitset>
 #include <string>
 
-// Data
 std::string inputText(std::string message);
 void convertToBinary(std::string text);
 
@@ -10,6 +9,7 @@ int main()
 {
 	std::string text = inputText("Masukan kalimat : "); 
 	convertToBinary(text);
+	
 	return 0;
 }
 
@@ -30,6 +30,4 @@ void convertToBinary(std::string text)
 		std::cerr << binaryRep << "\n";
 	}
 	
-	// std::bitset<8> temp(text);
-	// std::cerr << temp << "\n";	
 }
