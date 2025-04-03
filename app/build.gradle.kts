@@ -13,18 +13,5 @@ plugins {
 
 // Set the target operating system and architecture for this application
 application {
-    targetMachines.add(machines.linux.x86_64)
-    targetMachines.add(machines.windows.x86_64)
-    targetMachines.add(machines.macOS.x86_64)
-
-    // Configure the C++ compiler options
-    binaries.all {
-        // Set the C++ standard (e.g., c++11, c++14, c++17, c++20)
-        cppCompiler.args.addAll("-std=c++17") // Ganti dengan standar C++ yang diinginkan
-
-        // Ignore all warnings
-        cppCompiler.args.addAll("-w") // Untuk GCC dan Clang
-        // Jika menggunakan MSVC, Anda bisa menggunakan:
-        // cppCompiler.args.addAll("/W0") // Untuk mengabaikan semua warning di MSVC
-    }
+    targetMachines = listOf(machines.windows.x86, machines.windows.x86_64, machines.macOS.x86_64, machines.linux.x86_64)
 }
