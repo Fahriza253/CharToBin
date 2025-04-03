@@ -28,5 +28,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: app-build-${{ github.run_id }}-${{ github.run_number }}-${{ github.sha }}
+          name: app-build-${{matrix.os}}-${{ github.run_id }}-${{ github.run_number }}-${{ github.sha }}
           path: app/build
